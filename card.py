@@ -1,7 +1,8 @@
 class Card:
 
-    def __init__(self):
-        pass
+    def __init__(self, suit, card):
+        self.suit = suit
+        self.card = card
 
     def __str__(self):
-        pass
+        return self.card + " of " + self.suit
