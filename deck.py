@@ -1,16 +1,19 @@
 class Deck:
 
     def __init__(self):
-        self.deck = []  
+        self.deck = []
         for suit in suits:
-            for rank in ranks:
-                pass
+            for card in cards:
+                self.deck.append(Card(suit,card))
 
     def __str__(self):
-        pass
+        deck_comp = ''
+        for i in self.deck:
+            deck.comp += '\n' + i.__str__()
+        return 'The deck has: ' + deck_comp
 
     def shuffle(self):
         random.shuffle(self.deck)
 
     def deal(self):
-        pass
+        return single_card = self.deck.pop()
