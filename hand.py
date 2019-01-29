@@ -5,7 +5,7 @@ class Hand:
         self.aces = 0
 
     def add_card(self,card):
-        pass
+        self.cards.append()
 
     def adjust_for_ace(self):
         pass
