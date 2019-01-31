@@ -21,13 +21,26 @@ def take_bet(chips):
 
 
 def hit(deck, hand):
-    pass
+    single_card = deck.deal()
+    hand.add_card(single_card)
+    hand.adjust_for_ace()
 
 
 def hit_or_stand(deck, hand):
     global playing
 
-    pass
+    while True:
+        x = input('Hit or Stand? Enter H or S: ')
+
+        if x[0].lower() == 'h':
+            hit(deck, hand)
+        elif x[0].lower() == 's':
+            print("Player stands, Dealer's turn.")
+            playing = False
+        else:
+            print('Sorry, I did not understand that. Please enter H or S.')
+            continue
+        break
 
 
 def show_some(player,dealer):
