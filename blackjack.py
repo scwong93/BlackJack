@@ -7,8 +7,17 @@ values = {'Ace': 11, 'Two': 2, 'Three': 3, 'Four': 4, 'Five': 5, 'Six': 6, 'Seve
 playing = True
 
 
-def take_bet():
-    pass
+def take_bet(chips):
+    while True:
+        try:
+            chips.bet = int(input("How many chips would you like to bet? "))
+        except:
+            print("Sorry please provide an integer")
+        else:
+            if chips.bet > chips.total:
+                print('Sorry, you do not have enough chips. You have: {}'.format(chips.total))
+            else:
+                break
 
 
 def hit(deck, hand):
